@@ -1,0 +1,188 @@
+/* Container for the entire top bar */
+.topbarContainer {
+  height: 50px;
+  width: 100%;
+  background-color: #782bb2; /* Slightly adjusted color for better contrast */
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  padding: 0 20px; /* Added padding for better spacing */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Added subtle shadow for depth */
+}
+
+/* Left section of the top bar */
+.topbarLeft {
+  flex: 3;
+}
+
+/* Logo styling */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.logo:hover {
+  color: #ffd700; /* Gold color on hover for a premium feel */
+}
+
+/* Center section of the top bar */
+.topbarCenter {
+  flex: 5;
+  position: relative;
+}
+
+/* Search bar styling */
+.searchbar {
+  width: 100%;
+  height: 35px; /* Increased height for better usability */
+  background-color: white;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px; /* Added padding for better text alignment */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+}
+
+.searchIcon {
+  font-size: 22px !important; /* Slightly larger icon */
+  color: #782bb2; /* Matching icon color with topbar */
+}
+
+.searchInput {
+  border: none;
+  width: 85%; /* Adjusted width for better alignment */
+  margin-left: 5px;
+}
+
+.searchInput:focus {
+  outline: none;
+}
+
+/* Right section of the top bar */
+.topbarRight {
+  flex: 4;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+}
+
+/* Top bar links */
+.topbarLink {
+  margin-right: 15px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.topbarLink:hover {
+  color: #ffd700; /* Gold color on hover */
+}
+
+.authHandlers {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+/* Icon badge for notifications and other icons */
+.topbarIconBadge {
+  width: 16px;
+  height: 16px;
+  background-color: red;
+  border-radius: 50%;
+  color: white;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+/* Profile image in the top bar */
+.topbarImg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid #782bb2; /* Increased border thickness for a more pronounced effect */
+}
+
+/* Profile holder */
+.profileHolder {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /* Increased gap for better spacing */
+}
+
+.profileText {
+  color: white;
+  font-size: 18px;
+  /* Increased font weight for better readability */
+  transition: color 0.3s ease;
+}
+
+.profileText:hover {
+  color: #ffd700; /* Gold color on hover */
+}
+
+.logout {
+  background-color: #fff;
+  border-radius: 5px;
+}
+/* Logout button text */
+.Logout-text {
+  color: black;
+  font-size: 18px;
+  margin-right: 5px;
+  transition: color 0.3s ease;
+}
+
+/* Styles for search results dropdown */
+.searchbarResult {
+  position: absolute;
+  top: 40px;
+  width: 100%;
+  background-color: white;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); /* Slightly darker shadow for contrast */
+  z-index: 999;
+  max-height: 250px; /* Increased max height for more results */
+  overflow-y: auto; /* Use auto to show scrollbar only when needed */
+}
+
+.searchbarResult ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.searchbarResult li {
+  padding: 12px 15px; /* Increased padding for better readability */
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.searchbarResult li:last-child {
+  border-bottom: none;
+}
+
+.searchbarResult a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  font-size: 16px; /* Slightly larger font size for readability */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.searchbarResult a:hover {
+  background-color: #f5f5f5; /* Lighter hover effect for a subtle change */
+  color: #782bb2; /* Matching hover color with topbar */
+}
